@@ -7,39 +7,48 @@ var welcomeMessage = document.getElementById('welcome-message');
 var questionIndex = 0;
 var quizQuestions = [
     {
-        // question, choices, answers
-        question: "Hello World",
+        // question, choices, answer
+        question: "Commonly used data types DO NOT include:",
         choices: [
-            "option1", "option2", "option3","option4"
+            "1. Strings", "2. Booleans", "3. Alerts","4. Numbers"
         ],
-        answer: "option2"
+        answer: "3. Alerts"
     },
     {
-        // question, choices, answers
-        question: "Hello World",
+        // question, choices, answer
+        question: "The condition in an if/else statement is enclosed with ______.",
         choices: [
-            "option1", "option2", "option3","option4"
+            "1. Quotes", "2. Curly Brackets", "3. Parenthesis","4. Square Brackets"
         ],
-        answer: "option2"
+        answer: "3. Parenthesis"
     },
     {
-        // question, choices, answers
-        question: "Hello World",
+        // question, choices, answer
+        question: "Arrays in JavaScript can be used to store _______.",
         choices: [
-            "option1", "option2", "option3","option4"
+            "1. Numbers and Strings", "2. Other Arrays", "3. Booleans","4. All of the above"
         ],
-        answer: "option2"
+        answer: "4. All of the above"
     },
     {
-        // question, choices, answers
-        question: "Hello World",
+        // question, choices, answer
+        question: "String values must be enclosed within _______ when being assigned to variables.",
         choices: [
-            "option1", "option2", "option3","option4"
+            "1. Commas", "2. Curly Brackets", "3. Quotes","4. Parenthesis"
         ],
-        answer: "option2"
+        answer: "3. Quotes"
+    },
+    {
+        // question, choices, answer
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        choices: [
+            "1. JavaScript", "2. Terminal/Bash", "3. For Loops","4. Console Log"
+        ],
+        answer: "4. Console Log"
     },
 ]
 
+// function to start timer and count down by 1 second
 function timerStart() {
     timeInterval = setInterval(function(){
         if (timeLeft > 1) {
@@ -52,6 +61,7 @@ function timerStart() {
     }, 1000);
 }
 
+// when button is clicked start timer and start quiz
 startBtn.addEventListener("click", function() {
     timerStart();
     welcomeMessage.classList.add("hidden");
@@ -59,6 +69,8 @@ startBtn.addEventListener("click", function() {
     startQuiz();
 })
 
+
+// function to start quiz and cycle through questions
 function startQuiz() {
     document.getElementById('question-text').textContent = quizQuestions[questionIndex].question;
     var answerBox = document.getElementById('answer-choices')
@@ -68,5 +80,7 @@ function startQuiz() {
         btn.textContent = quizQuestions[questionIndex].choices[i];
         answerBox.append(btn);
     }
+
+    if 
 }
 
