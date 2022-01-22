@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+#timer {
+    padding: 1em;
+}
+
+#coding-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome-text {
+    max-width: 55%;
+    font-size: 1.15em;
+}
+
+.hidden {
+    display: none;
+}

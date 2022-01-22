@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="container">
+        <p id="high-scores">View High Scores</p>
+        <p id="timer">Time:</p>
+    </div>
+    <div id="coding-questions">
+        <div id="welcome-message" class="box">
+            <h2>Welcome to the Coding Quiz</h2>
+            <p id=welcome-text>Try to answer as many questions correct within the time limit. Keep in mind that incorrect answers will penalize your score/timer by 10 seconds. Good luck!</p>
+            <button id="start">Start Quiz</button>
+        </div> 
+        <div id="quiz" class="hidden">
+            <h2 id="question-text">Hello World</h2>
+            <div id="answer-choices"></div>
+        </div> 
+    </div>
+    <script src="./assets/js/script.js" ></script>
+</body>
+</html>
