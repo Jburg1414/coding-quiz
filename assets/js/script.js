@@ -4,6 +4,8 @@ var timeInterval;
 var startBtn = document.getElementById('start');
 var quizEl = document.getElementById('quiz');
 var welcomeMessage = document.getElementById('welcome-message');
+var correctAnswer = document.getElementById('correct');
+var incorrectAnswer = document.getElementById('incorrect')
 var questionIndex = 0;
 var quizQuestions = [
     {
@@ -75,12 +77,32 @@ function startQuiz() {
     document.getElementById('question-text').textContent = quizQuestions[questionIndex].question;
     var answerBox = document.getElementById('answer-choices')
     answerBox.innerHTML = ""
+
     for (i=0; i < quizQuestions[questionIndex].choices.length; i++) {
         var btn = document.createElement("button");
         btn.textContent = quizQuestions[questionIndex].choices[i];
+        btn.setAttribute("id", "button");
+        btn.setAttribute("value", btn.textContent);
         answerBox.append(btn);
+        btn.onclick = btnClick;
     }
+};
 
-    if 
-}
+// what happens when an answer is selected respond either correct or incorrect
+function btnClick(event) {
+    selectedAnswer = event.target
+    var quizReply = document.getElementById('response')
+    var answer = quizQuestions[questionIndex].answer;
+    console.log(answer);
+    console.log(selectedAnswer);
 
+    if (selectedAnswer.value == answer) {
+        quizReply.innerHTML = ("Correct");
+    } else {
+        quizReply.innerHTML = ("Incorrect");
+        timeLeft-= 10;
+    };
+
+    // I was not able to get the questions to move to the next question after selecting an answer.
+    // Had I been able to I would have cycled through all of the questions, and the remaining amount of time would have been saved as the high score. 
+};

@@ -33,3 +33,18 @@
 .hidden {
     display: none;
 }
+
+#answer-choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+button {
+    background-color: blue;
+    color:white;
+    margin: 2%;
+}
+
+#
