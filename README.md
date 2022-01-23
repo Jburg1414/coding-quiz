@@ -6,6 +6,8 @@ This is the start of my basic coding quiz. I was able to get the HTML, a little 
 
 ## Usage
 
+![Initial Homepage](assets/images/initial_quiz_page.png)
+![First Question Prompt](assets/images/first_question.png)
 
 
 
